@@ -1,0 +1,44 @@
+﻿@using System.Globalization;
+@model IEnumerable<CityWeather>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+    <meta charset="UTF-8" />
+
+</head>
+<body>
+    <div class="page-content">
+        <h1>Weather</h1>
+
+        @foreach (CityWeather cityWeather in Model)
+        {
+            <div class="box">
+                <h3>@cityWeather.CityName</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>@cityWeather.DateAndTime.ToString("hh:mm tt", CultureInfo.InvariantCulture)</td>
+
+
+
+                        </tr>
+                        <tr>
+                            <td>@cityWeather.TemperatureFahrenheit F`</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <a href="/weather/@cityWeather.CityUniqueCode">Details</a>
+            </div>
+        }
+    </div>
+</body>
+</html>
+
+
+@section footer_section
+{
+    <p>Contact Support: 099162660604930</p>
+}
