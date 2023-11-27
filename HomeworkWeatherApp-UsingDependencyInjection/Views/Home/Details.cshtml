@@ -1,0 +1,43 @@
+﻿@model CityWeather
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+    <meta charset="UTF-8" />
+
+</head>
+<body>
+    <div class="page-content">
+        <h1>Weather</h1>
+
+            <div class="box">
+                <h3>@Model.CityName</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                        
+                        <td>
+                            @Model.DateAndTime.ToString("hh:mm tt", CultureInfo.InvariantCulture)</td>
+
+                        </tr>
+                    <tr>
+                <td>@Model.DateAndTime.ToString("MM/dd/yyyy")</td>
+                        <td>
+                        <tr>
+                        <td>@Model.TemperatureFahrenheit F`</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <a href="/">Back to Weather home page</a>
+            </div>
+
+    </div>
+</body>
+</html>
+
+@section footer_section
+{
+    <p>Contact Support: 099162660604930</p>
+}
