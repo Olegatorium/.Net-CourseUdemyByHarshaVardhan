@@ -1,0 +1,41 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Demo</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Social Media Links</h1> <br>
+        </div>
+
+        <div class="flex">
+            <div class="box blue-back">
+                <a href="@ViewBag.FaceBook" target="_blank" class="social-link">Facebook</a>
+            </div>
+
+            <div class="box green-back">
+                <a href="@ViewBag.Youtube" target="_blank" class="social-link">YouTube</a>
+            </div>
+
+            <div class="box orange-back">
+                <a href="@ViewBag.Twitter" target="_blank" class="social-link">Twitter</a>
+            </div>
+
+            <environment exclude="Development">
+            <div class="box">
+                <a href="@ViewBag.Instagram" target="_blank" class="social-link">Instagram</a>
+            </div>
+            </environment>
+        </div>
+    </div>
+</body>
+
+</html>
